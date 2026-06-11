@@ -12,12 +12,12 @@ namespace Corse_Project
             InitializeComponent();
             DatabaseInitializer dbInitializer = new DatabaseInitializer();
 
-            dbInitializer.CreateTable(sql, "Clients");
+            /*dbInitializer.CreateTable(sql, "Clients");
             dbInitializer.CreateTable(sql2, "MembershipTypes");
             dbInitializer.CreateTable(sql3, "Memberships");
             dbInitializer.CreateTable(sql0, "Users");
             dbInitializer.CreateTable(sql4, "Visits");
-            dbInitializer.CreateTable(sql5, "Payments");
+            dbInitializer.CreateTable(sql5, "Payments");*/
 
         }            
 
@@ -31,10 +31,10 @@ namespace Corse_Project
             (Id INTEGER PRIMARY KEY IDENTITY(1,1),
             FullName NVARCHAR(150) NOT NULL,
             PhoneNumber NVARCHAR(20) NOT NULL,
-            BirthDay DATE CHECK (BirthDay <= CURRENT_TIMESTAMP), 
+            BirthDay DATE CHECK (BirthDay <= CURRENT_TIMESTAMP),    //ÑÒÐÎÊÀ 31: ÏÐÎÂÅÐÊÀ, ×ÒÎÁÛ ÍÅ ÂÂÅÑÒÈ ÇÀÏÈÑÜ ÈÇ ÁÓÄÓÙÅÃÎ
             RegistrationDate DATE DEFAULT CURRENT_TIMESTAMP,
             Status NVARCHAR(50),
-            Note NVARCHAR(MAX));";   //ÑÒÐÎÊÀ 31: ÏÐÎÂÅÐÊÀ, ×ÒÎÁÛ ÍÅ ÂÂÅÑÒÈ ÇÀÏÈÑÜ ÈÇ ÁÓÄÓÙÅÃÎ
+            Note NVARCHAR(MAX));";   
         //âèä àáîíåìåíòîâ
         public string sql2 = @"
         IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'MembershipTypes')
@@ -94,6 +94,7 @@ namespace Corse_Project
 
         #endregion
         
-        
+
+
     }
 }

@@ -5,5 +5,18 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Corse_Project.MainWindow"
         Title="Corse_Project">
-    
+<Grid ColumnDefinitions="200, *">
+   <StackPanel Grid.Column="0">
+        <Button Content="Ãëàâíàÿ" Click="OpenHome_Click" Width="180"/>
+        <Button Content="Êëèåíòû" Click="OpenClients_Click" Width="180"/>
+    </StackPanel>
+
+        <!-- ÏÐÀÂÀß ×ÀÑÒÜ Ñ ÀÍÈÌÀÖÈÅÉ -->
+        <TransitioningContentControl Name="MainContentControl" Grid.Column="1">
+            <TransitioningContentControl.PageTransition>
+                <!-- Àíèìàöèÿ ïîÿâëåíèÿ (ðàñòâîðåíèÿ) -->
+                <CrossFade Duration="0:0:0.3" />
+            </TransitioningContentControl.PageTransition>
+        </TransitioningContentControl>
+</Grid>
 </Window>

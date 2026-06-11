@@ -11,7 +11,7 @@ namespace Corse_Project
     {
         private const string ConnectionString =
             @"Server=(localdb)\mssqllocaldb;
-              Database=;
+              Database=CourseDB;
               Integrated Security=True;
               TrustServerCertificate=True;";
         public void CreateTable(string sqlQuery, string TableName)
