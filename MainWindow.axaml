@@ -6,17 +6,22 @@
         x:Class="Corse_Project.MainWindow"
         Title="Corse_Project">
 <Grid ColumnDefinitions="200, *">
-   <StackPanel Grid.Column="0">
+   <StackPanel Grid.Column="0" Spacing="8" Margin="10">
         <Button Content="Главная" Click="OpenHome_Click" Width="180"/>
         <Button Content="Клиенты" Click="OpenClients_Click" Width="180"/>
+        <Button Content="Абонементы" Click="OpenMemberships_Click" Width="180"/>
+        <Button Content="Виды абонементов" Click="OpenMembershipsTypes_Click" Width="180"/>
+        <Button Content="Отчёты" Click="OpenReports_Click" Width="180"/>
+        <Button Content="Посещения" Click="OpenVisits_Click" Width="180"/>
+        <Button Content="Оплаты" Click="OpenPayments_Click" Width="180"/> 
     </StackPanel>
 
-        <!-- ПРАВАЯ ЧАСТЬ С АНИМАЦИЕЙ -->
-        <TransitioningContentControl Name="MainContentControl" Grid.Column="1">
-            <TransitioningContentControl.PageTransition>
-                <!-- Анимация появления (растворения) -->
-                <CrossFade Duration="0:0:0.3" />
-            </TransitioningContentControl.PageTransition>
-        </TransitioningContentControl>
+    <!-- ПРАВАЯ ЧАСТЬ С АНИМАЦИЕЙ -->
+    <TransitioningContentControl Name="MainContentControl" Grid.Column="1">
+        <TransitioningContentControl.PageTransition>
+            <!-- Анимация появления (растворения) -->
+            <CrossFade Duration="0:0:0.3" />
+        </TransitioningContentControl.PageTransition>
+    </TransitioningContentControl>
 </Grid>
 </Window>

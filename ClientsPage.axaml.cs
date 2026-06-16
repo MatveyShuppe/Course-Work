@@ -10,4 +10,9 @@ public partial class ClientsPage : UserControl
     {
         InitializeComponent();
     }
+
+    public void OpenClients_Click()
+    {
+
+    }
 }

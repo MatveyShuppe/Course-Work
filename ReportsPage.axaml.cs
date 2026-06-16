@@ -4,14 +4,14 @@ using Avalonia.Markup.Xaml;
 
 namespace Corse_Project;
 
-public partial class VisitsPage : UserControl
+public partial class ReportsPage : UserControl
 {
-    public VisitsPage()
+    public ReportsPage()
     {
         InitializeComponent();
     }
 
-    public void OpenVisits_Click()
+    public void OpenReports_Click()
     {
 
     }

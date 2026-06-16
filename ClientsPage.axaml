@@ -5,9 +5,9 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Corse_Project.ClientsPage">
     <StackPanel>
-    <TextBlock Text ="Раздел: Клиенты"
+    <TextBlock Text ="Page:Clients"
                FontSize="24"
-               FontWeight="Bold"
+               FontWeight="Regular"
                Foreground="#2C3E50"
                HorizontalAlignment="Center"
                VerticalAlignment="Center"

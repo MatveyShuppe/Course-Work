@@ -10,4 +10,10 @@ public partial class Memberships : UserControl
     {
         InitializeComponent();
     }
+
+    public void OpenMemberships_Click()
+    {
+        
+    }
+
 }

@@ -5,7 +5,7 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Corse_Project.HomePage">
     <StackPanel>
-        <TextBlock Text="ÐÀÇÄÅË: Ãëàâíàÿ" 
+        <TextBlock Text="Page: Home" 
                    FontSize="24" 
                    FontWeight="Bold" 
                    Foreground="#2C3E50"

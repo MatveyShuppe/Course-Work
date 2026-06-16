@@ -3,13 +3,15 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="Corse_Project.Memberships">
+             x:Class="Corse_Project.MembershipTypesPage">
   <StackPanel>
-      <TextBlock Text="Page: Memberships"
-                 FontSize="24"
-                 FontWeight="Bold"
-                 Foreground="#2C3E50"
-                 HorizontalAlignment="Center"
-                 VerticalAlignment="Center"/>
+      <TextBlock
+          Text="Page:MembershipTypes"
+          FontSize="24"
+          FontWeight="Medium"
+          Foreground="#2C4"
+          VerticalAlignment="Center"
+          HorizontalAlignment="Center"/>
+      
   </StackPanel>
 </UserControl>

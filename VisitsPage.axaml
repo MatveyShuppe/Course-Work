@@ -4,5 +4,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Corse_Project.VisitsPage">
-  Welcome to Avalonia!
+  <StackPanel>
+      <TextBlock
+        Text="Page: Visits"
+        FontSize="24"
+        FontWeight="ExtraLight"
+        Foreground="#2C43"
+        VerticalAlignment="Center"
+        HorizontalAlignment="Center"
+        />
+  </StackPanel>
 </UserControl>
