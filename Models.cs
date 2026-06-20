@@ -13,7 +13,7 @@ namespace Corse_Project
         public int MembershipId { get; set; }
         public int Amount { get; set; }
         public DateTime? PaymentDate { get; set; }
-        public string PeymentMethod { get; set; }
+        public string PaymentMethod { get; set; }
         
     }
     public class Visits
@@ -54,7 +54,7 @@ namespace Corse_Project
         public int Id { get; set; }
         public string FullName { get; set; }
         public string PhoneNumber { get; set; }
-        public DateTime? BirthDate { get; set; }
+        public DateTime? BirthDay { get; set; }
         public DateTime? RegistrationDate { get; set; }
         public string? Status { get; set; }
         public string? Note { get; set; }

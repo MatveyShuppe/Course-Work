@@ -10,9 +10,4 @@ public partial class ReportsPage : UserControl
     {
         InitializeComponent();
     }
-
-    public void OpenReports_Click()
-    {
-
-    }
 }

@@ -7,13 +7,14 @@
         Title="Corse_Project">
 <Grid ColumnDefinitions="200, *">
    <StackPanel Grid.Column="0" Spacing="8" Margin="10">
-        <Button Content="Главная" Click="OpenHome_Click" Width="180"/>
-        <Button Content="Клиенты" Click="OpenClients_Click" Width="180"/>
-        <Button Content="Абонементы" Click="OpenMemberships_Click" Width="180"/>
-        <Button Content="Виды абонементов" Click="OpenMembershipsTypes_Click" Width="180"/>
-        <Button Content="Отчёты" Click="OpenReports_Click" Width="180"/>
-        <Button Content="Посещения" Click="OpenVisits_Click" Width="180"/>
-        <Button Content="Оплаты" Click="OpenPayments_Click" Width="180"/> 
+        <Button Content="Home" Click="OpenHome_Click" Width="180"/>
+        <Button Content="Clients" Click="OpenClients_Click" Width="180"/>
+        <Button Content="Memberships" Click="OpenMemberships_Click" Width="180"/>
+        <Button Content="Types of Memberships" Click="OpenMembershipsTypes_Click" Width="180"/>
+        <Button Content="Reports" Click="OpenReports_Click" Width="180"/>
+        <Button Content="Visits" Click="OpenVisits_Click" Width="180"/>
+        <Button Content="Payments" Click="OpenPayments_Click" Width="180"/> 
+        <Button Content="Users" Click="OpenUsers_Click" Width="180"/>
     </StackPanel>
 
     <!-- ПРАВАЯ ЧАСТЬ С АНИМАЦИЕЙ -->
@@ -24,4 +25,25 @@
         </TransitioningContentControl.PageTransition>
     </TransitioningContentControl>
 </Grid>
+
+<!-- стили скатал с нейронки -->
+<!-- СТИЛИ ДЛЯ КНОПОК (чтобы они выглядели красиво и современно) -->
+    <Window.Styles>
+        <Style Selector="Button.MenuButton">
+            <Setter Property="Background" Value="#34495E"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Height" Value="45"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="20,0,0,0"/>
+            <Setter Property="CornerRadius" Value="6"/>
+        </Style>
+        <!-- Эффект при наведении мыши на кнопку -->
+        <Style Selector="Button.MenuButton:pointerover /template/ ContentPresenter">
+            <Setter Property="Background" Value="#1ABC9C"/>
+            <Setter Property="TextBlock.Foreground" Value="White"/>
+        </Style>
+    </Window.Styles>
 </Window>

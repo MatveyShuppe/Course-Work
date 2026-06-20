@@ -11,8 +11,4 @@ public partial class PaymentsPage : UserControl
         InitializeComponent();
     }
 
-    public void OpenPayments_Click()
-    {
-
-    }
 }

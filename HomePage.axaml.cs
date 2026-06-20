@@ -11,10 +11,6 @@ namespace Corse_Project
         {
             InitializeComponent();
         }
-        public void OpenHome_Click()
-        {
-
-        }
     }
 }
 
