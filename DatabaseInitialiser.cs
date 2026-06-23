@@ -24,5 +24,33 @@ namespace Corse_Project
 
             Console.WriteLine($"Таблица {TableName} создана! (или уже есть)");
         }
+
+        public List<Clients> GetAllClients()
+        {
+            var result = new List<Clients>();
+
+            using var connection = new SqlConnection(ConnectionString);
+            using var command = new SqlCommand("select Id, FullName, PhoneNumber, Birthday, RegistrationDate, Status, Note from Clients",connection);
+            connection.Open();
+
+            using var reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                var c = new Clients()
+                {
+                    Id = reader.GetInt32(reader.GetOrdinal("Id")),
+                    FullName = reader.GetString(reader.GetOrdinal("FullName")),
+                    PhoneNumber = reader.GetString(reader.GetOrdinal("PhoneNumber")),
+                    BirthDay = reader.IsDBNull(reader.GetOrdinal("Birthday")) ? (DateTime?)null : reader.GetDateTime(reader.GetOrdinal("Birthday")),
+                    RegistrationDate = reader.IsDBNull(reader.GetOrdinal("RegistrationDate")) ? (DateTime?)null :
+                    reader.GetDateTime(reader.GetOrdinal("RegistrationDate")),
+                    Status = reader.GetString(reader.GetOrdinal("Status")),
+                    Note = reader.GetString(reader.GetOrdinal("Note")),
+                };
+                result.Add(c);
+            }
+            return result;
+        }
+
     }
 }
