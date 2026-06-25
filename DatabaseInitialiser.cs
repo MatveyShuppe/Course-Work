@@ -65,11 +65,39 @@ namespace Corse_Project
 
             command.Parameters.AddWithValue("@fullName", fullName);
             command.Parameters.AddWithValue("@phoneNumber", phoneNumber);
-            command.Parameters.AddWithValue("@birthDay", Birthday);
-            command.Parameters.AddWithValue("@registrationDate", RegistrationDate);
-            command.Parameters.AddWithValue("@status", Status);
-            command.Parameters.AddWithValue("@note", Note);
-
+            if (Birthday == null)
+            {
+                command.Parameters.AddWithValue("@birthDay", DBNull.Value);
+            }
+            else
+            {
+                command.Parameters.AddWithValue("@birthDay", Birthday);
+            }
+            if (RegistrationDate == null)
+            {
+                command.Parameters.AddWithValue("@registrationDate", DBNull.Value);
+            }
+            else
+            {
+                command.Parameters.AddWithValue("@registrationDate", RegistrationDate);
+            }
+            if (Status == null)
+            {
+                command.Parameters.AddWithValue("@status", DBNull.Value);
+            }
+            else
+            {
+                command.Parameters.AddWithValue("@status", Status);
+            }
+            if (Note == null)
+            {
+                command.Parameters.AddWithValue("@note", DBNull.Value);
+            }
+            else
+            {
+                command.Parameters.AddWithValue("@note", Note);
+            }
+            
             int rows = command.ExecuteNonQuery();
             Console.WriteLine("Добавлено строк: " + rows);
         }
