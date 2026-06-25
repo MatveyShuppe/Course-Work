@@ -25,6 +25,7 @@ namespace Corse_Project
             Console.WriteLine($"Таблица {TableName} создана! (или уже есть)");
         }
 
+        //помогла нейросеть
         public List<Clients> GetAllClients()
         {
             var result = new List<Clients>();
@@ -50,6 +51,27 @@ namespace Corse_Project
                 result.Add(c);
             }
             return result;
+        }
+
+        public void AddClient(string fullName, string phoneNumber, DateTime Birthday, DateTime RegistrationDate, string Status, string Note)
+        {
+            using var connection = new SqlConnection(ConnectionString);
+            connection.Open();
+
+            string sql = @"insert into Clients(FullName, PhoneNumber, BirthDay, RegistrationDate, Status, Note)
+            values (@fullName, @phoneNumber, @birthDay ,@registrationDate, @status, @note);";
+
+            using var command =  new SqlCommand(sql, connection);
+
+            command.Parameters.AddWithValue("@fullName", fullName);
+            command.Parameters.AddWithValue("@phoneNumber", phoneNumber);
+            command.Parameters.AddWithValue("@birthDay", Birthday);
+            command.Parameters.AddWithValue("@registrationDate", RegistrationDate);
+            command.Parameters.AddWithValue("@status", Status);
+            command.Parameters.AddWithValue("@note", Note);
+
+            int rows = command.ExecuteNonQuery();
+            Console.WriteLine("Добавлено строк: " + rows);
         }
 
     }
